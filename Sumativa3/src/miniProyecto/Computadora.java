@@ -213,43 +213,4 @@ public class Computadora {
         
     }
     
-    
-    
-    
-    
-//    public static void eliminarEquipo(String valor){
-//        Scanner entrada = new Scanner(System.in);
-//
-//
-//
-//
-//
-//        //estructura de control si desea eliminar el equipo especifico
-//        System.out.println("Eliminar Equipo \nSI-1, NO-2");
-//        int confirmacion = entrada.nextInt();
-//
-//        if (confirmacion == 1) {
-//            //creacion de eliminacion por el usuario
-//            System.out.println("---------------------------------");
-//            System.out.println("SISTEMA DE ELIMINACION DE EQUIPO");
-//            System.out.println("---------------------------------");
-//            System.out.println("Introduzca el indice del equipo:");
-//
-//            int indice = entrada.nextInt();
-//
-//            //control logico de validacion del indice
-//            if (indice >= 0 && indice < identificador.size()) {
-//                Computadora eliminar = identificador.get(indice);
-//                listaEquipos.remove(eliminar);
-//                System.out.println("--------------------");
-//                System.out.println("OPERACION COMPLETA!");
-//                System.out.println("--------------------");
-//            } else {
-//                System.out.println("ERROR DE OPERACION\n INDICE NO VALIDO");
-//            }
-//        }
-//        else {
-//            System.out.println("EXIT");
-//        }
-//    }
 }
