@@ -19,7 +19,7 @@ public class main {
     Computadora computadora4= new Computadora("HP", "32GB", "corei9-12G", "Windonws 11", 700);
     Computadora computadora5= new Computadora("HP", "32GB", "corei9-11G", "Windonws 11", 630);
         
-    //agregamos los objetos existentes creados desde la sumativa 1
+//    //agregamos los objetos existentes creados desde la sumativa 1
     computadora1.registro();
     computadora2.registro();
     computadora3.registro();
@@ -28,33 +28,19 @@ public class main {
     
     Computadora.nuevoEquipo(equipo);
     Computadora.imprimirLista();
-    System.out.println("-------------------------");
+
     Computadora.equipoEspecifico();
     Computadora.imprimirLista();
-    
-    System.out.println("----------------------------------------------------");
-    System.out.println("introduzca el indice para elimanr el equipo presente");
-    System.out.println("----------------------------------------------------");
-    int indice = equipo.nextInt();
-    Computadora.eliminarEquipo(indice);
+
+    Computadora.equipoEliminar();
     Computadora.imprimirLista();
-    
-        
-    
-    
     
     //datos del propietario
     //tienda.imprimir();
-    
-
-    
-    
-    
+   
     
     //fin de codigo
     
     }
-    
-  
             
 }
