@@ -128,28 +128,44 @@ public class Computadora {
         System.out.println("-------------------------");
 
     }
-    
-    // Método estático para eliminar una computadora por índice
-    public static void eliminarEquipo(int indice) {
-        if (indice >= 0 && indice < listaEquipos.size()) {
-            listaEquipos.remove(indice);
-            System.out.println("---------------------");
-            System.out.println("OPERACION COMPLETADA.");
-            System.out.println("---------------------");            
-        } else {
-            System.out.println("-------------------------------------------");            
-            System.out.println("ERROR DE OPERACION.\nINDIQUE BIEN EL INDICE");
-            System.out.println("-------------------------------------------");            
-            
-        }
-    }
-    
-    
 
     //metodo para mostrar una equipo especifico y eliminarlo
     public static List<Computadora> equipoEspecifico() {
         System.out.println("-------------------------------");
+        System.out.println("Ingrese nombre del modelo");
         
+        Scanner entrada = new Scanner(System.in);
+        String idMarca = entrada.nextLine();
+        List<Computadora> identificador = new ArrayList<>();
+
+        for (Computadora computadora : listaEquipos) {
+
+            String marcaComputadora = computadora.getMarca();
+            //convertimos las cadenas en minusculas y comparamos
+            if (computadora.getMarca().toLowerCase().equals(idMarca.toLowerCase())) {
+                identificador.add(computadora);
+            }
+           
+        }
+         
+        //estructura de control si se encuentra el equipo
+        if (identificador.size() == 0) {
+            System.out.println("-------------------------------");
+            System.out.println("ERROR NO SE ENCUENTRA EQUIPO!!");
+            System.out.println("-------------------------------");
+            
+        }
+
+        System.out.println("\nComputadoras de la marca '" + idMarca + "':");
+        for (int i = 0; i < identificador.size(); i++) {
+            System.out.println(i + ": " + identificador.get(i));
+        }
+        return null;
+    }
+    
+    public static List<Computadora> equipoEliminar() {
+        System.out.println("-------------------------------");
+        System.out.println("Sistema de Eliminacion de Equipo:");        
         System.out.println("Ingrese nombre del modelo");
         
         Scanner entrada = new Scanner(System.in);
@@ -187,8 +203,6 @@ public class Computadora {
 
         if (confirmacion == 1) {
             //creacion de eliminacion por el usuario
-            System.out.println("---------------------------------");
-            System.out.println("SISTEMA DE ELIMINACION DE EQUIPO");
             System.out.println("---------------------------------");
             System.out.println("Introduzca el indice del equipo:");
 
